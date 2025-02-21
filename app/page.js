@@ -1,8 +1,9 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { hero, heroMobile, star, sky, downArrow, twistedArrow } from "./assets";
+import { hero, heroMobile, star, sky, downArrow, twistedArrow, family } from "./assets";
 import CardSection from "@/components/Card";
 import { cardsData } from "@/utils/cardsData";
+import MissionSection from "@/components/MissionSection";
 
 
 export default function Home() {
@@ -171,6 +172,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Mission Section */}
+      <MissionSection />
     </main>
   );
 }
