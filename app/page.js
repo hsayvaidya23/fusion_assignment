@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { hero, heroMobile, star } from "./assets";
+import CardSection from "@/components/Card";
+import { cardsData } from "@/utils/cardsData";
+
 
 export default function Home() {
   return (
@@ -29,7 +32,7 @@ export default function Home() {
           </h1>
           <p className="mb-8 text-[18px] sm:text-xl font-normal">Less Planning, More Living.</p>
 
-          <Button className="inline-flex cursor-pointer items-center px-8 py-4 rounded-lg bg-[#FF97A8] hover:bg-[#FF97A8] transition-colors duration-200 text-white font-semibold text-lg">
+          <Button className="cursor-pointer items-center px-8 py-7 rounded-[50px] bg-[#FF97A8] hover:bg-[#FF97A8] transition-colors duration-200 text-white font-semibold text-lg">
             <Image
               src={star}
               alt="star Logo"
@@ -38,6 +41,22 @@ export default function Home() {
             <span className="text-black font-medium text-[18px] font-lato tracking-[-0.5px]">Join the waiting list</span>
           </Button>
         </div>
+      </section>
+
+      {/* Why JustLiv Section */}
+      <section className="py-20 px-4 items-center">
+        <h2 className="md:text-center text-3xl font-serif mb-16 text-left">Why JustLiv?</h2>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cardsData.map((card, index) => (
+              <CardSection
+                key={index}
+                title={card.title}
+                description={card.description}
+                imgSrc={card.imgSrc}
+                imgAlt={card.imgAlt}
+              />
+            ))}
+          </div>
       </section>
     </main>
   );
