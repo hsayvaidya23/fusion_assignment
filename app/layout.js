@@ -1,15 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import React from "react"
 import "./globals.css";
+import { Playfair_Display } from "next/font/google"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const playfair = Playfair_Display({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+  variable: "--font-playfair",
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -20,7 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${playfair.variable}`}
       >
         {children}
       </body>
