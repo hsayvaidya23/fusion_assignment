@@ -9,10 +9,7 @@ export default {
   theme: {
   	extend: {
   		fontFamily: {
-  			serif: [
-  				'var(--font-playfair)',
-  				'serif'
-  			]
+  			lato: ['Lato', 'sans-serif'],
   		},
   		colors: {
   			border: 'hsl(var(--border))',
