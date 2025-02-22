@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { hero, heroMobile, star, sky, downArrow, twistedArrow, girls } from "./assets";
+import { hero, heroMobile, star, sky, downArrow, twistedArrow, girls, logo } from "./assets";
 import CardSection from "@/components/Card";
 import { cardsData } from "@/utils/cardsData";
 import MissionSection from "@/components/MissionSection";
 import GirlsSection from "@/components/Girls";
+import Link from "next/link";
+import Footer from "@/components/Footer";
 
 
 export default function Home() {
@@ -75,7 +77,7 @@ export default function Home() {
 
           {/* Content */}
           <div className="relative max-w-4xl mx-auto">
-            <h2 className="text-center text-3xl font-serif mb-16">How it works</h2>
+            <h2 className="md:text-center text-3xl font-serif mb-16 text-left">How it works</h2>
             <div className="flex flex-col space-y-12 items-start mx-auto max-w-xl">
               {/* Step 1: Browse */}
               <div className="flex items-start space-x-6 relative">
@@ -179,25 +181,8 @@ export default function Home() {
 
       {/* Waitlist Section */}
       <GirlsSection />
-      {/* <section className="relative py-20 px-4">
-        <Image
-          src={girls}
-          alt="Girls playing"
-          fill
-          className="object-contain "
-        /> */}
-        {/* <div className="absolute inset-0 bg-black/50"></div> */}
-        {/* <div className="relative max-w-4xl mx-auto text-center text-white">
-          <h2 className="text-3xl font-serif mb-4">Ready to Simplify Your Life?</h2>
-          <p className="mb-8">
-            Be the first to know when we launch! Join our waiting list and get exclusive updates and early access to our
-            journey.
-          </p>
-          <Button className="rounded-full bg-pink-400 hover:bg-pink-500 text-white px-8 py-6 text-lg">
-            Join the waiting list
-          </Button>
-        </div>
-      </section> */}
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }
