@@ -4,6 +4,7 @@ import Image from "next/image";
 const CardSection = ({ title, description, imgSrc, imgAlt }) => {
   return (
     <div className="bg-white rounded-[20px] shadow-[0_0_16px_2px_rgba(0,0,0,0.05)] p-6 flex flex-col">
+      {/* Sparkles Icon */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -22,19 +23,27 @@ const CardSection = ({ title, description, imgSrc, imgAlt }) => {
         <path d="M4 17v2"></path>
         <path d="M5 18H3"></path>
       </svg>
+
+      {/* Title */}
       <h3 className="text-[21px] text-[#384252] font-normal mb-2 font-primary">
         {title}
       </h3>
+
+      {/* Description */}
       <p className="text-[16px] font-lato font-normal text-[#959AA2] mb-4">
         {description}
       </p>
-      <Image
-        src={imgSrc}
-        alt={imgAlt}
-        width={400}
-        height={300}
-        // className="mt-auto rounded-lg  h-auto"
-      />
+
+      {/* Image */}
+      <div className="mt-auto">
+        <Image
+          src={imgSrc}
+          alt={imgAlt}
+          width={400}
+          height={300}
+          className="rounded-lg w-full h-auto"
+        />
+      </div>
     </div>
   );
 };
