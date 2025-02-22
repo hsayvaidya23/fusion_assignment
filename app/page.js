@@ -21,9 +21,9 @@ export default function Home() {
       <WhyJustLivSection />
 
       {/* How it Works Section */}
-      <section className="relative text-white py-20 px-4">
+      {/* <section className="relative text-white py-20 px-4"> */}
         <HowItWorksSection />
-      </section>
+      {/* </section> */}
 
       {/* Mission Section */}
       <MissionSection />
