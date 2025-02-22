@@ -11,6 +11,7 @@ import sky from './sky.png'
 import twistedArrow from './twistedArrow.png'
 import star from './star.svg'
 import favicon from './favicon.png'
+import girlMobile from './girlMobile.png'
 
 export {
     hero,
@@ -25,5 +26,6 @@ export {
     sky,
     twistedArrow,
     star,
-    favicon
+    favicon,
+    girlMobile
 }

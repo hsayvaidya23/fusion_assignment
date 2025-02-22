@@ -9,7 +9,8 @@ export default {
   theme: {
   	extend: {
   		fontFamily: {
-  			lato: ['Lato', 'sans-serif'],
+			primary: 'Fraunces',
+			lato: 'Lato',
   		},
   		colors: {
   			border: 'hsl(var(--border))',
